@@ -6,7 +6,7 @@
 <div class="indexPage">
         <div class="indexPage_header">
             <img src="./assets/logo.svg" alt="logo">
-            <a href="/login">Entrar</a>
+            <a href="{{ route('login') }}">Entrar</a>
         </div>
         <div class="indexPage_content">
             <div class="indexPage_content_title">
@@ -17,7 +17,7 @@
                         <p>Organize e gerencie suas <span>atividades</span> com maestria com o <span>Focus</span>, uma
                             ferramenta gratuita de
                             gerenciamento de <span>tarefas</span> com mais recursos do que você imagina.</p>
-                        <a href="/cadastro">Cadastre-se já</a>
+                        <a href="{{ route('register') }}">Cadastre-se já</a>
                     </div>
                 </div>
                 <div>

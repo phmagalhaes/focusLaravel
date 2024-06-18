@@ -4,15 +4,16 @@
 
 @section('content')
 <div class="loginPage">
-        <form action="">
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
             <h1>Faça o seu login</h1>
             <label for="email">Email</label>
-            <input type="email" name="email" required>
+            <input type="email" name="email" required autofocus>
             <label for="senha">Senha</label>
-            <input type="password" name="senha" required>
+            <input type="password" name="password" required>
 
             <div>
-                <a href="/cadastro">Não possui cadastro? Clique aqui</a>
+                <a href="{{ route('register') }}">Não possui cadastro? Clique aqui</a>
                 <button type="submit">Entrar</button>
             </div>
         </form>

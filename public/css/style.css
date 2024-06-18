@@ -186,15 +186,15 @@
 .loginPage form label, .cadastroPage form label{
     color: var(--cinzaPrim);
     font-family: 'montserrat';
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 500;
     margin: 2px;
 }
 .loginPage form input, .cadastroPage form input{
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     border: 2px solid var(--cinzaPrim);
     border-radius: 30px;
-    padding: 10px;
+    padding: 5px 10px;
     width: 40rem;
     font-size: 18px;
 }
