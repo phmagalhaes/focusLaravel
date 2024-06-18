@@ -227,3 +227,12 @@
 .loginPage form div button:hover, .cadastroPage form div button:hover {
     background-color: var(--azulPrim);
 }
+
+
+.alert-danger{
+    margin-top: 15px;
+}
+.alert-danger ul li{
+    color: red;
+    list-style: none;
+}
