@@ -18,7 +18,7 @@
 
             <div>
                 <a href="{{ route('login') }}">Já possui cadastro? Clique aqui</a>
-                <button type="submit">Entrar</button>
+                <button type="submit">Cadastrar</button>
             </div>
             @if ($errors->any())
             <div class="alert alert-danger">

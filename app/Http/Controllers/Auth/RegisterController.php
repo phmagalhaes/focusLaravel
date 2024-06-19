@@ -24,7 +24,6 @@ class RegisterController extends Controller
         auth()->login($user);
 
         return redirect()->route('home');
-
     }
 
     protected function validator(array $data)
