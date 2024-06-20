@@ -382,7 +382,16 @@
 .tarefasAtrasadas,
 .tarefasConcluidas,
 .tarefasUrgentes {
-    overflow-y: scroll;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.tarefasEmAndamento::-webkit-scrollbar,
+.tarefasAtrasadas::-webkit-scrollbar,
+.tarefasConcluidas::-webkit-scrollbar,
+.tarefasUrgentes::-webkit-scrollbar {
+    display: none;
 }
 
 .tarefasEmAndamento .tarefa,

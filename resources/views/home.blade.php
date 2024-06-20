@@ -44,6 +44,46 @@
                                 </div>
                             @endif
                         @endforeach
+                        <div class="tarefa">
+                            <h1>nome da tarefa</h1>
+                            <p>aaaaaaaaaaaaaa</p>
+                            <section class="tarefa_footer">
+                                <p>até 19/06</p>
+                                <a href="">Ver mais ></a>
+                            </section>
+                        </div>
+                        <div class="tarefa">
+                            <h1>nome da tarefa</h1>
+                            <p>aaaaaaaaaaaaaa</p>
+                            <section class="tarefa_footer">
+                                <p>até 19/06</p>
+                                <a href="">Ver mais ></a>
+                            </section>
+                        </div>
+                        <div class="tarefa">
+                            <h1>nome da tarefa</h1>
+                            <p>aaaaaaaaaaaaaa</p>
+                            <section class="tarefa_footer">
+                                <p>até 19/06</p>
+                                <a href="">Ver mais ></a>
+                            </section>
+                        </div>
+                        <div class="tarefa">
+                            <h1>nome da tarefa</h1>
+                            <p>aaaaaaaaaaaaaa</p>
+                            <section class="tarefa_footer">
+                                <p>até 19/06</p>
+                                <a href="">Ver mais ></a>
+                            </section>
+                        </div>
+                        <div class="tarefa">
+                            <h1>nome da tarefa</h1>
+                            <p>aaaaaaaaaaaaaa</p>
+                            <section class="tarefa_footer">
+                                <p>até 19/06</p>
+                                <a href="">Ver mais ></a>
+                            </section>
+                        </div>
                     </div>
                     <div class="tarefasAtrasadas">
                         <h1>Tarefas atrasadas</h1>
