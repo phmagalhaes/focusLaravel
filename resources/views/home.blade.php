@@ -39,7 +39,7 @@
                                     <p>{{ $task->description }}</p>
                                     <section class="tarefa_footer">
                                         <p>Até {{ date('d/m', strtotime($task->deliveryDate)) }}</p>
-                                        <a href="">Ver mais ></a>
+                                        <a href="/tasks/{{ $task->id }}">Ver mais ></a>
                                     </section>
                                 </div>
                             @endif
@@ -54,7 +54,7 @@
                                     <p>{{ $task->description }}</p>
                                     <section class="tarefa_footer">
                                         <p>Era para {{ date('d/m', strtotime($task->deliveryDate)) }} ás {{ date('H:i', strtotime($task->deliveryDate)) }}</p>
-                                        <a href="">Ver mais ></a>
+                                        <a href="/tasks/{{ $task->id }}">Ver mais ></a>
                                     </section>
                                 </div>
                             @endif
@@ -71,7 +71,7 @@
                                     <p>{{ $task->description }}</p>
                                     <section class="tarefa_footer">
                                         <p></p>
-                                        <a href="">Ver mais ></a>
+                                        <a href="/tasks/{{ $task->id }}">Ver mais ></a>
                                     </section>
                                 </div>
                             @endif
@@ -86,7 +86,7 @@
                                     <p>{{ $task->description }}</p>
                                     <section class="tarefa_footer">
                                         <p></p>
-                                        <a href="">Ver mais ></a>
+                                        <a href="/tasks/{{ $task->id }}">Ver mais ></a>
                                     </section>
                                 </div>
                             @endif

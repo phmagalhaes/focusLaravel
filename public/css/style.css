@@ -159,7 +159,8 @@
 }
 
 /* PAGINA DE LOGIN E CADASTRO */
-.loginPage, .cadastroPage{
+.loginPage,
+.cadastroPage {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -168,29 +169,37 @@
     position: relative;
     background: linear-gradient(var(--azulPrim), var(--azulClaro));
 }
+
 /* FORMULARIO LOGIN E CADASTRO*/
-.loginPage form, .cadastroPage form{
+.loginPage form,
+.cadastroPage form {
     padding: 20px 30px;
     border-radius: 30px;
     background-color: white;
     display: flex;
     flex-direction: column;
 }
-.loginPage form h1, .cadastroPage form h1{
+
+.loginPage form h1,
+.cadastroPage form h1 {
     text-align: center;
     margin: 0 0 25px 0;
     font-family: 'montserrat';
     font-size: 35px;
     color: var(--azulPrim);
 }
-.loginPage form label, .cadastroPage form label{
+
+.loginPage form label,
+.cadastroPage form label {
     color: var(--cinzaPrim);
     font-family: 'montserrat';
     font-size: 17px;
     font-weight: 500;
     margin: 2px;
 }
-.loginPage form input, .cadastroPage form input{
+
+.loginPage form input,
+.cadastroPage form input {
     margin-bottom: 20px;
     border: 2px solid var(--cinzaPrim);
     border-radius: 30px;
@@ -198,21 +207,29 @@
     width: 40rem;
     font-size: 18px;
 }
-.loginPage form div, .cadastroPage form div{
+
+.loginPage form div,
+.cadastroPage form div {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
 }
-.loginPage form div a, .cadastroPage form div a{
+
+.loginPage form div a,
+.cadastroPage form div a {
     color: var(--cinzaPrim);
     text-decoration: none;
     transition: all 300ms ease;
 }
-.loginPage form div a:hover, .cadastroPage form div a:hover{
+
+.loginPage form div a:hover,
+.cadastroPage form div a:hover {
     text-decoration: underline;
 }
-.loginPage form div button, .cadastroPage form div button{
+
+.loginPage form div button,
+.cadastroPage form div button {
     background-color: var(--azulClaro);
     border: none;
     padding: 10px;
@@ -224,15 +241,18 @@
     cursor: pointer;
     transition: background-color 350ms ease;
 }
-.loginPage form div button:hover, .cadastroPage form div button:hover {
+
+.loginPage form div button:hover,
+.cadastroPage form div button:hover {
     background-color: var(--azulPrim);
 }
 
 /* MENSAGENS DE ALERTA */
-.alert-danger{
+.alert-danger {
     margin-top: 15px;
 }
-.alert-danger ul li{
+
+.alert-danger ul li {
     color: red;
     list-style: none;
 }
@@ -377,19 +397,20 @@
     padding: 15px 20px;
     position: relative;
 }
+
 .tarefasConcluidas .tarefa,
-.tarefasUrgentes .tarefa{
+.tarefasUrgentes .tarefa {
     height: 40%;
 }
 
 .tarefasEmAndamento .tarefa h1,
 .tarefasAtrasadas .tarefa h1,
 .tarefasConcluidas .tarefa h1,
-.tarefasUrgentes .tarefa h1{
+.tarefasUrgentes .tarefa h1 {
     color: var(--azulPrim);
 }
 
-.tarefa_footer{
+.tarefa_footer {
     position: absolute;
     display: flex;
     width: 90%;
@@ -408,4 +429,131 @@
 .homePage_main_links a {
     font-size: 18px;
     font-weight: 500;
+}
+
+/* PAGINA DA TASK */
+/* PAGINA DA TASK - header*/
+.taskPage_header {
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.taskPage_header img {
+    width: 150px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.taskPage_header p {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.taskPage_header form button {
+    background-color: var(--azulPrim);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    min-width: 100px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 350ms ease;
+    text-decoration: none;
+}
+
+.taskPage_header form button:hover {
+    background-color: var(--azulClaro);
+}
+
+/* PAGINA DA TASK - main*/
+.taskPage_main {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.taskPage_main .task {
+    width: 48%;
+    border-radius: 30px;
+    background-color: var(--azulPrim);
+    margin: 40px 0;
+    padding: 30px 40px;
+    position: relative;
+}
+
+.task h1 {
+    color: white;
+    font-size: 50px;
+    text-shadow: 0 0 10px var(--azulClaro);
+}
+
+.task p {
+    color: white;
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+.dates {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.dates h3 {
+    color: white;
+    margin-top: 50px;
+    font-size: 20px;
+    text-shadow: 0 0 5px var(--azulClaro);
+}
+
+.dates p {
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+    width: 100%;
+}
+
+.buttons .button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    min-width: 100px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 350ms ease;
+    text-decoration: none;
+    background-color: rgb(173, 41, 41);
+}
+
+.buttons .button:first-child {
+    background-color: var(--verdePrim);
+}
+
+.buttons .button:first-child:hover {
+    background-color: #22a16e;
+}
+
+.buttons .button:hover {
+    background-color: rgb(230, 57, 57);
+}
+
+.edit a {
+    color: white;
+    font-size: 18px;
 }
