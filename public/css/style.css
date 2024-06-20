@@ -27,12 +27,12 @@
 .indexPage a {
     background-color: var(--azulPrim);
     border: none;
-    padding: 15px 20px;
+    padding: 10px 20px;
     border-radius: 30px;
     font-weight: 500;
     font-size: 18px;
     color: white;
-    min-width: 125px;
+    min-width: 100px;
     cursor: pointer;
     text-align: center;
     transition: background-color 350ms ease;
@@ -220,7 +220,7 @@
     font-weight: 500;
     font-size: 18px;
     color: white;
-    min-width: 125px;
+    min-width: 100px;
     cursor: pointer;
     transition: background-color 350ms ease;
 }
@@ -228,11 +228,184 @@
     background-color: var(--azulPrim);
 }
 
-
+/* MENSAGENS DE ALERTA */
 .alert-danger{
     margin-top: 15px;
 }
 .alert-danger ul li{
     color: red;
     list-style: none;
+}
+
+
+/* PAGINA HOME */
+/* PAGINA HOME - header*/
+.homePage_header {
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homePage_header img {
+    width: 150px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.homePage_header p {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.homePage_header form button {
+    background-color: var(--azulPrim);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    min-width: 100px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 350ms ease;
+    text-decoration: none;
+}
+
+.homePage_header form button:hover {
+    background-color: var(--azulClaro);
+}
+
+/* PAGINA HOME - main */
+.homePage_main {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homePage_main form .input {
+    position: relative;
+    width: 450px;
+}
+
+.homePage_main form .input input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 35px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border: 2px solid var(--cinzaPrim);
+}
+
+.homePage_main form .input i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--cinzaPrim);
+}
+
+.tarefas {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    min-height: 75vh;
+    margin-top: 30px;
+}
+
+.tarefas h1 {
+    color: white;
+}
+
+.tarefas_principais {
+    width: 67.5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarefas_principais .tarefasEmAndamento,
+.tarefas_principais .tarefasAtrasadas {
+    height: 100%;
+    width: 48%;
+    background-color: var(--azulPrim);
+    border-radius: 30px;
+    padding: 15px 20px;
+    box-shadow: 0 0 15px var(--azulClaro);
+}
+
+.tarefas_secundarias {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.tarefas_secundarias .tarefasConcluidas,
+.tarefas_secundarias .tarefasUrgentes {
+    width: 100%;
+    height: 45%;
+    background-color: var(--azulPrim);
+    border-radius: 30px;
+    padding: 15px 20px;
+    box-shadow: 0 0 15px var(--azulClaro);
+}
+
+.tarefasEmAndamento,
+.tarefasAtrasadas,
+.tarefasConcluidas,
+.tarefasUrgentes {
+    overflow-y: scroll;
+}
+
+.tarefasEmAndamento .tarefa,
+.tarefasAtrasadas .tarefa,
+.tarefasConcluidas .tarefa,
+.tarefasUrgentes .tarefa {
+    width: 100%;
+    height: 25%;
+    border-radius: 30px;
+    margin: 10px 0;
+    background-color: #E9E9E9;
+    padding: 15px 20px;
+    position: relative;
+}
+.tarefasConcluidas .tarefa,
+.tarefasUrgentes .tarefa{
+    height: 40%;
+}
+
+.tarefasEmAndamento .tarefa h1,
+.tarefasAtrasadas .tarefa h1,
+.tarefasConcluidas .tarefa h1,
+.tarefasUrgentes .tarefa h1{
+    color: var(--azulPrim);
+}
+
+.tarefa_footer{
+    position: absolute;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    bottom: 15px;
+}
+
+
+.homePage_main_links {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homePage_main_links a {
+    font-size: 18px;
+    font-weight: 500;
 }
