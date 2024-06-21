@@ -23,4 +23,9 @@ class TaskController extends Controller
         $task = Task::findOrFail($id);
         return view('showTask', ["task" => $task]);
     }
+
+    public function create()
+    {
+        return view('home');
+    }
 }
