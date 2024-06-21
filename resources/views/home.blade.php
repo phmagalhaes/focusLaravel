@@ -22,6 +22,9 @@
                         <i class="ph ph-magnifying-glass"></i>
                     </div>
                 </form>
+                @if (session('msg'))
+                    <p>{{ session('msg') }}</p>
+                @endif
                 <a href="{{ route('create') }}">Criar nova tarefa</a>
             </div>
             
@@ -42,13 +45,13 @@
                                         <a href="/tasks/{{ $task->id }}">Ver mais ></a>
                                     </section>
                                 </div>
-                            @endif
+                            @endif  
                         @endforeach
                     </div>
                     <div class="tarefasAtrasadas">
                         <h1>Tarefas atrasadas</h1>
                         @foreach($tasks as $task)
-                            @if ($task->deliveryDate < date('Y-m-d H:i:s'))
+                            @if ($task->deliveryDate < date('Y-m-d H:i:s') && $task->concluded == 0)
                                 <div class="tarefa">
                                     <h1>{{ $task->title }}</h1>
                                     <p>{{ $task->description }}</p>
@@ -80,7 +83,7 @@
                     <div class="tarefasUrgentes">
                         <h1>Tarefas urgentes</h1>
                         @foreach($tasks as $task)
-                            @if ($task->deliveryDate > date('Y-m-d H:i:s') && $task->deliveryDate < date('Y-m-d H:i:s', strtotime('+1 day')))
+                            @if ($task->deliveryDate > date('Y-m-d H:i:s') && $task->deliveryDate < date('Y-m-d H:i:s', strtotime('+1 day')) && $task->concluded == 0)
                                 <div class="tarefa">
                                     <h1>{{ $task->title }}</h1>
                                     <p>{{ $task->description }}</p>

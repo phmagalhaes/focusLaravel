@@ -31,12 +31,20 @@
                     </div>
                     <div class="buttons">
                         <div>
-                            <a href="" class="button">Concluir Atividade</a>
-                            <a href="" class="button"> Excluir</a>
+                            <form action="/task/concluded/{{ $task->id }}" method="POST">
+                                @csrf
+                                @method('PUT')
+                                <button class='button' type="submit">Concluir tarefa</button>
+                            </form>
+                            <form action="/task/{{ $task->id }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button class='button' type="submit">Excluir</button>
+                            </form>
                         </div>
 
                         <div class="edit">
-                            <a href="">Editar informações</a>
+                            <a href="/task/edit/{{ $task->id }}">Editar informações</a>
                         </div>
                     </div>
                 </div>
