@@ -20,4 +20,4 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/home', [TaskController::class, 'index'])->name('home')->middleware('auth');
 Route::get('/tasks/{id}', [TaskController::class, 'show'])->middleware('auth');
 
-Route::get('/tasks/create', [TaskController::class, 'create']);
+Route::get('/tasks/create', [TaskController::class, 'create'])->name('create')->middleware('auth');
