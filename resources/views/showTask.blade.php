@@ -6,7 +6,7 @@
     <div class="taskPage">
         <header class="taskPage_header">
             <div>
-                <img src="../assests/logo.svg" alt="logo">
+                <img src="{{ asset('assets/logo.svg') }}" alt="logo">
                 <p>Bem vindo(a), {{ auth()->user()->name }}!</p>
             </div>
             <form method="POST" action="{{ route('logout') }}">
@@ -34,12 +34,12 @@
                             <form action="/task/concluded/{{ $task->id }}" method="POST">
                                 @csrf
                                 @method('PUT')
-                                <button class='button' type="submit">Concluir tarefa</button>
+                                <button class='button concluirButton' type="submit">Concluir tarefa</button>
                             </form>
                             <form action="/task/{{ $task->id }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button class='button' type="submit">Excluir</button>
+                                <button class='button excluirButton' type="submit">Excluir</button>
                             </form>
                         </div>
 

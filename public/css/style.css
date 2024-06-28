@@ -193,17 +193,17 @@
 .cadastroPage form label {
     color: var(--cinzaPrim);
     font-family: 'montserrat';
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 500;
     margin: 2px;
 }
 
 .loginPage form input,
 .cadastroPage form input {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     border: 2px solid var(--cinzaPrim);
     border-radius: 30px;
-    padding: 5px 10px;
+    padding: 10px;
     width: 40rem;
     font-size: 18px;
 }
@@ -237,7 +237,7 @@
     font-weight: 500;
     font-size: 18px;
     color: white;
-    min-width: 100px;
+    min-width: 125px;
     cursor: pointer;
     transition: background-color 350ms ease;
 }
@@ -245,16 +245,6 @@
 .loginPage form div button:hover,
 .cadastroPage form div button:hover {
     background-color: var(--azulPrim);
-}
-
-/* MENSAGENS DE ALERTA */
-.alert-danger {
-    margin-top: 15px;
-}
-
-.alert-danger ul li {
-    color: red;
-    list-style: none;
 }
 
 
@@ -387,13 +377,6 @@
     scrollbar-width: none;
 }
 
-.tarefasEmAndamento::-webkit-scrollbar,
-.tarefasAtrasadas::-webkit-scrollbar,
-.tarefasConcluidas::-webkit-scrollbar,
-.tarefasUrgentes::-webkit-scrollbar {
-    display: none;
-}
-
 .tarefasEmAndamento .tarefa,
 .tarefasAtrasadas .tarefa,
 .tarefasConcluidas .tarefa,
@@ -406,20 +389,19 @@
     padding: 15px 20px;
     position: relative;
 }
-
 .tarefasConcluidas .tarefa,
-.tarefasUrgentes .tarefa {
+.tarefasUrgentes .tarefa{
     height: 40%;
 }
 
 .tarefasEmAndamento .tarefa h1,
 .tarefasAtrasadas .tarefa h1,
 .tarefasConcluidas .tarefa h1,
-.tarefasUrgentes .tarefa h1 {
+.tarefasUrgentes .tarefa h1{
     color: var(--azulPrim);
 }
 
-.tarefa_footer {
+.tarefa_footer{
     position: absolute;
     display: flex;
     width: 90%;
@@ -439,6 +421,7 @@
     font-size: 18px;
     font-weight: 500;
 }
+
 
 /* PAGINA DA TASK */
 /* PAGINA DA TASK - header*/
@@ -480,16 +463,14 @@
 .taskPage_header form button:hover {
     background-color: var(--azulClaro);
 }
-
 /* PAGINA DA TASK - main*/
-.taskPage_main {
+.taskPage_main{
     display: flex;
     width: 90%;
     margin: 0 auto;
     justify-content: space-between;
 }
-
-.taskPage_main .task {
+.taskPage_main .task{
     width: 48%;
     border-radius: 30px;
     background-color: var(--azulPrim);
@@ -497,45 +478,42 @@
     padding: 30px 40px;
     position: relative;
 }
-
-.task h1 {
+.task h1{
     color: white;
     font-size: 50px;
     text-shadow: 0 0 10px var(--azulClaro);
 }
-
-.task p {
+.task p{
     color: white;
     font-size: 25px;
     margin: 15px 0;
 }
-
-.dates {
+.dates{
     display: flex;
     justify-content: space-between;
     width: 70%;
 }
-
-.dates h3 {
+.dates h3{
     color: white;
     margin-top: 50px;
     font-size: 20px;
     text-shadow: 0 0 5px var(--azulClaro);
 }
-
-.dates p {
+.dates p{
     margin: 0;
 }
-
-.buttons {
+.buttons{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 70px;
+   width: 100%; 
+}
+.buttons div{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 70px;
-    width: 100%;
 }
-
-.buttons .button {
+.buttons .button{
     border: none;
     padding: 10px 20px;
     border-radius: 30px;
@@ -549,20 +527,99 @@
     text-decoration: none;
     background-color: rgb(173, 41, 41);
 }
-
-.buttons .button:first-child {
+.buttons .concluirButton{
     background-color: var(--verdePrim);
 }
-
-.buttons .button:first-child:hover {
+.buttons .concluirButton:hover{
     background-color: #22a16e;
 }
-
-.buttons .button:hover {
+.buttons .excluirButton{
     background-color: rgb(230, 57, 57);
+    margin-left: 20px;
 }
-
-.edit a {
+.edit a{
     color: white;
     font-size: 18px;
+}
+
+
+/* CRIAR E EDITAR TAREFA */
+.formPage_content{
+    width: 90%;
+    margin: 70px auto;
+}
+/* .formPage_content form{
+    margin: 20px 0;
+    width: 50%;
+} */
+
+.formPage_content form {
+    padding: 20px 0px;
+    width: 100%;
+}
+.formPage_content form .inputs{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.formPage_content form .inputs div{
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+}
+.formPage_content form .inputs div label{
+    color: var(--cinzaPrim);
+    font-family: 'montserrat';
+    font-size: 20px;
+    font-weight: 500;
+    margin: 2px;
+}
+.formPage_content form .inputs div .labelDate{
+    margin-top: 40px;
+}
+.formPage_content form .inputs div input{
+    border: 2px solid var(--cinzaPrim);
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 18px;
+}
+.formPage_content form .inputs div .dateTimeInput{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.formPage_content form .inputs div .dateTimeInput input{
+    width: 47%;
+}
+.formPage_content form .inputs div textarea{
+    border: 2px solid var(--cinzaPrim);
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 18px;
+    height: 100%;
+}
+
+.formPage_content form .buttons{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+    margin-top: 20px;
+}
+.formPage_content form button {
+    background-color: var(--azulClaro);
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    min-width: 125px;
+    cursor: pointer;
+    transition: background-color 350ms ease;
+}
+
+.formPage_content form button:hover {
+    background-color: var(--azulPrim);
 }
